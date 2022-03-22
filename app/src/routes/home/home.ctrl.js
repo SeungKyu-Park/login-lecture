@@ -7,11 +7,14 @@ const User = require('../../models/User');
 
 const output = {
     home: (req, res) => {
-        res.render('home/index.ejs')
+        res.render('home/index') // 23강 까까지  file.ejs 확장자 명까지 다 했었네 이제 지움
     },
     login: (req, res) => {
-        res.render('home/login.ejs');
-    }   
+        res.render('home/login');
+    },
+    register: (req, res) => {
+        res.render('home/register')
+    },
 };
 
 const process = {
