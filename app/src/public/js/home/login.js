@@ -2,7 +2,7 @@
 
 const id = document.querySelector("#id"),
     psword = document.querySelector('#psword'),
-    loginBtn = document.querySelector('button');
+    loginBtn = document.querySelector("#button");
 
 // console.log(id); 
 // result: <input id='id' type="text" placeholder='아이디'>
