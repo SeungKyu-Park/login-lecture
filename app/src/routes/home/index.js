@@ -12,3 +12,5 @@ router.get('/register', ctrl.output.register)
 router.post('/login', ctrl.process.login);
 
 module.exports = router;
+
+//console.log("helelel");

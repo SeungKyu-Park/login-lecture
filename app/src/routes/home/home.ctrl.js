@@ -21,7 +21,7 @@ const process = {
     login: (req, res) => { // 객체안 함수는 ":" , 객체는 "=" 인가 ?? 
         const user = new User(req.body);
         const response = user.login();
-        console.log(response);
+        // console.log(response);
         return res.json(response);
 
 
