@@ -18,10 +18,9 @@ const output = {
 };
 
 const process = {
-    login: (req, res) => { // 객체안 함수는 ":" , 객체는 "=" 인가 ?? 
+    login: async (req, res) => { // 객체안 함수는 ":" , 객체는 "=" 인가 ?? 
         const user = new User(req.body);
-        const response = user.login();
-        // console.log(response);
+        const response = await user.login();
         return res.json(response);    
     },
     register: (req, res) => {
