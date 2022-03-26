@@ -6,6 +6,7 @@ class User {
     constructor(body) {
         this.body = body;
     }
+
     async login() {
         const client = this.body;
         const { id, psword } = await UserStorage.getUserInfo(client.id);
@@ -19,9 +20,14 @@ class User {
         return { success: false, msg: "존재하지 않는 아이디 입니다"};
     }
 
-    register() {
-        const client = this.body; // 함수안에서 다른 함수 안으로 들어갈수 없으니 다시 함수안에서 정의 그런데 constructor에서의 this.body는???
-        UserStorage.save(client) // req,body에서 오는 정보를 입력 후 세이브 할 로직
+    async register() {
+        const client = this.body; 
+        try {
+        const response = await UserStorage.save(client); // 데이타베이스가 처리할 시간을 줄수 있게
+        return response;
+        } catch (err) {
+            return { success: false, msg: err };
+        }
     }
 }
 
