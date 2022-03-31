@@ -34,9 +34,7 @@ class UserStorage {
     // }
 
 
-    static getUsers(isAll, ...fields) { 
-
-    }  
+    //static getUsers(isAll, ...fields) { 이건 안쓰게 되서 지운다 34강 }  
  
     static getUserInfo(id) {
       return new Promise( (resolve, reject) => {
